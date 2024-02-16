@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textDegisken.setText(textDegisken.getText()+"5");
-
             }
         });
         dortDegisken.setOnClickListener(new View.OnClickListener() {
