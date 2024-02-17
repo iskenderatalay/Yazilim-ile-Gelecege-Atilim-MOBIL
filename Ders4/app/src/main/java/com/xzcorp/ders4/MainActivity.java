@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity{
     TextView textDegiskeni;
     MediaPlayer sesDosyasi;
     Button startDegiskeni, pauseDegiskeni;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity{
                 pauseDegiskeni.setVisibility(View.VISIBLE);
             }
         });
-
         pauseDegiskeni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,33 +49,28 @@ public class MainActivity extends AppCompatActivity{
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         Toast.makeText(MainActivity.this,"on START a girdi",Toast.LENGTH_SHORT).show();
         //sesDosyasi.start();
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         Toast.makeText(MainActivity.this,"on STOP a girdi",Toast.LENGTH_SHORT).show();
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(MainActivity.this,"on DESTROY a girdi",Toast.LENGTH_SHORT).show();
     }
-
     @Override
     protected void onPause() {
         super.onPause();
         Toast.makeText(MainActivity.this,"on PAUSE a girdi",Toast.LENGTH_SHORT).show();
         //sesDosyasi.stop();
     }
-
     @Override
     protected void onResume() {
         super.onResume();

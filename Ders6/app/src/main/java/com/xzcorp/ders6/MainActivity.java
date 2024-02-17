@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(hizmet);
             }
         });
-
         yemeklerButonDegiskeni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
                 mesajDegisken.setText("Text Değişti");
             }
         });
-
         buttonDegisken.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
         buttonDegisken.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
