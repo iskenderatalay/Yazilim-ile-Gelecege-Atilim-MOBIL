@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 calanDegisken.setText(listeDegisken.getItemAtPosition(position)+"");
                 sira=(int)listeDegisken.getItemIdAtPosition(position);
+                stopPlaying();
             }
         });
 
@@ -101,5 +102,12 @@ public class MainActivity extends AppCompatActivity {
                     player.stop();
             }
         });
+    }
+    public void stopPlaying(){
+        if (player!=null) {
+            player.stop();
+            player.release();
+            player=null;
+        }
     }
 }
