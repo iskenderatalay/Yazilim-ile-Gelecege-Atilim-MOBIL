@@ -54,5 +54,4 @@
             android:text="Stop"
             android:id="@+id/stop"/>
     </LinearLayout>
-
 </LinearLayout>

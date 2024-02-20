@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     Button playButonu,stopButonu,pauseButonu;
     MediaPlayer player;
     String sarkilar[]={"Melis Fis-Gülü Sevdim Dikeni Battı","Can Bonomo,Mabel Matiz-Kalbi Hepten Kırıklara","Can Bonomo,Melike Şahin-Tükeniyor Ömrüm","Mabel Matiz-Müphem","Büyük Ev Ablukada-Yangın Akvaryum"};
-
     int sira;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
