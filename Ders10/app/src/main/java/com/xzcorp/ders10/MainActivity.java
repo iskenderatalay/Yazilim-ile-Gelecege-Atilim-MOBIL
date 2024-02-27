@@ -1,19 +1,23 @@
 package com.xzcorp.ders10;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     Button kaydetDegisken,silDegisken,duzeltDegisken;
-    EditText notDegisken;
-    RecyclerView listeDegisken;
-
+    EditText not;
+    RecyclerView liste;
+    ArrayList<Notlar> gelenNotlar=new ArrayList<>();
     String notId=null;
 
     @Override
@@ -24,17 +28,22 @@ public class MainActivity extends AppCompatActivity {
         kaydetDegisken=(Button) findViewById(R.id.kaydet);
         silDegisken=(Button) findViewById(R.id.sil);
         duzeltDegisken=(Button) findViewById(R.id.duzelt);
-        notDegisken=(EditText) findViewById(R.id.not);
-        listeDegisken=(RecyclerView) findViewById(R.id.liste);
+        not=(EditText) findViewById(R.id.not);
+        liste=(RecyclerView) findViewById(R.id.liste);
+
+        listele();
+
+        InputMethodManager inputMethodManager=(InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
         kaydetDegisken.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(notDegisken.getText().toString().trim().length()!=0){
+                if(not.getText().toString().trim().length()!=0) {
                     kaydet();
                     listele();
                     Toast.makeText(MainActivity.this, "Not Kaydedildi", Toast.LENGTH_SHORT).show();
-                    notId="1";
+                    not.setText("");
+                    inputMethodManager.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
                 }
                 else
                     Toast.makeText(MainActivity.this, "Lütfen Not Girin", Toast.LENGTH_SHORT).show();
@@ -44,10 +53,12 @@ public class MainActivity extends AppCompatActivity {
         duzeltDegisken.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(notDegisken.getText().toString().trim().length()!=0){
+                if(not.getText().toString().trim().length()!=0) {
                     duzelt();
                     listele();
                     Toast.makeText(MainActivity.this, "Not Düzeltildi", Toast.LENGTH_SHORT).show();
+                    not.setText("");
+                    inputMethodManager.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
                 }
                 else
                     Toast.makeText(MainActivity.this, "Lütfen Boş Bırakmayın", Toast.LENGTH_SHORT).show();
@@ -62,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     listele();
                     Toast.makeText(MainActivity.this, "Not Silindi", Toast.LENGTH_SHORT).show();
                     notId="";
+                    not.setText("");
                 }
                 else
                     Toast.makeText(MainActivity.this, "Not Silinemedi", Toast.LENGTH_SHORT).show();
@@ -71,17 +83,37 @@ public class MainActivity extends AppCompatActivity {
 
     void kaydet(){
         DatabaseHelper db=new DatabaseHelper(getApplicationContext());
-        db.notEkle(notDegisken.getText().toString());
+        db.notEkle(not.getText().toString());
         db.close();
     }
 
-    void listele(){
-        //Şimdilik boş
+    void listele() {
+        DatabaseHelper db=new DatabaseHelper(getApplicationContext());
+        gelenNotlar=db.notlariGetir();
+        NotAdaptor notadapetorsinif=new NotAdaptor(this,gelenNotlar);
+        LinearLayoutManager layoutum=new LinearLayoutManager(getApplicationContext());
+        liste.setLayoutManager(layoutum);
+        liste.setHasFixedSize(true);
+        liste.setAdapter(notadapetorsinif);
+
+        notadapetorsinif.setOnItemClickListener(kendimClickOlusturdum);
+        db.close();
     }
+
+    View.OnClickListener kendimClickOlusturdum=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            RecyclerView.ViewHolder viewHolder=(RecyclerView.ViewHolder) v.getTag();
+            int i=viewHolder.getAdapterPosition();
+            Notlar item=gelenNotlar.get(i);
+            not.setText(item.getNotIcerigi());
+            notId=item.getNotId();
+        }
+    };
 
     void duzelt(){
         DatabaseHelper db=new DatabaseHelper(getApplicationContext());
-        db.notDuzelt(notId,notDegisken.getText().toString());
+        db.notDuzelt(notId,not.getText().toString());
         db.close();
     }
 
