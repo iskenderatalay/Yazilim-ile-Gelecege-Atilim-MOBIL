@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "560175125946",
+    "firebase_url": "https://firstfirebaseproject-faca0-default-rtdb.firebaseio.com",
+    "project_id": "firstfirebaseproject-faca0",
+    "storage_bucket": "firstfirebaseproject-faca0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560175125946:android:bc86a22d3c8df1d5b7f983",
+        "android_client_info": {
+          "package_name": "com.xzcorp.ders11"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGfik0sL2ZBrSl4OHe3AW2gpqaFzdaAv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
