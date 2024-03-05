@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "595222635520",
+    "project_id": "secondproject-6691e",
+    "storage_bucket": "secondproject-6691e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595222635520:android:1bc96bcc8b689b8388a4e5",
+        "android_client_info": {
+          "package_name": "com.xzcorp.ders12"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcMfGxDmjWWlC2_GzNig_njcmUD_igBog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
