@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="whiteButton">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_marginTop">150dp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+
+    <style name="buttonText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:capitalize">characters</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textIsSelectablele">false</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_marginTop">150dp</item>
+
+
+    </style>
+
+    
+</resources>

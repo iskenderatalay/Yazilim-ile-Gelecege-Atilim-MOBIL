@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969335954044",
+    "project_id": "firestore-b855b",
+    "storage_bucket": "firestore-b855b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969335954044:android:16208816d2d67dd83547f9",
+        "android_client_info": {
+          "package_name": "com.xzcorp.ders14"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBU-QSg_2n2A5y03mYNa9d688xwIBVIjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
