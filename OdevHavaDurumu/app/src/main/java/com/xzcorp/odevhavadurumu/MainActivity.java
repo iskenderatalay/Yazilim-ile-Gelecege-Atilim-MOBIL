@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
                             String iconName=object22.getString("icon");
                             String iconUrl="https://openweathermap.org/img/w/"+iconName+".png";
-                            Picasso.with(MainActivity.this).load(iconUrl).into(wImage);
+                            Picasso.with(MainActivity.this).load(iconUrl).resize(400,400).centerCrop().into(wImage);
 
                             JSONObject object3=jsonObject.getJSONObject("wind");
                             String win=object3.getString("speed");
