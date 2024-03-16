@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="#FFEB3B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:id="@+id/flagImage"
+            android:src="@drawable/turkiye"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ulkeAdi"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:text="Ülke Adı"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:id="@+id/baskentAdi"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Başkent Adı"
+                android:textColor="#3F51B5"
+                android:textAllCaps="true"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/play"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            android:background="@color/material_on_background_disabled"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/stop"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@android:drawable/ic_media_pause"
+            android:background="@color/material_on_background_disabled"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

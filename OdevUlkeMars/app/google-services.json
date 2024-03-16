@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1070720603502",
+    "firebase_url": "https://ders13-b4a86-default-rtdb.firebaseio.com",
+    "project_id": "ders13-b4a86",
+    "storage_bucket": "ders13-b4a86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070720603502:android:95f127da7ed3ab83c59d7f",
+        "android_client_info": {
+          "package_name": "com.xzcorp.ders13"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpSw1bCf0fCJg5PLDK6wlQV4RjHGvJQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070720603502:android:cc4e6e9115191465c59d7f",
+        "android_client_info": {
+          "package_name": "com.xzcorp.odevcufcuf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpSw1bCf0fCJg5PLDK6wlQV4RjHGvJQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070720603502:android:7579b1b31b3dfd43c59d7f",
+        "android_client_info": {
+          "package_name": "com.xzcorp.odevulkemars"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbpSw1bCf0fCJg5PLDK6wlQV4RjHGvJQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
